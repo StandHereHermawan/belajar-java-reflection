@@ -31,6 +31,6 @@ public class ClassTest {
         System.out.println(Arrays.toString(personClass.getDeclaredConstructors()));
         System.out.println(Arrays.toString(personClass.getDeclaredMethods()));
         System.out.println(Arrays.toString(personClass.getFields()));
-        
+
     }
 }
