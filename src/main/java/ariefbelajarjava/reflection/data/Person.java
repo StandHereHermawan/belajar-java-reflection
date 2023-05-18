@@ -1,11 +1,15 @@
 package ariefbelajarjava.reflection.data;
 
+import ariefbelajarjava.reflection.annotation.NotBlank;
+
 import java.io.Serializable;
 
 public final class Person implements NameAble, Serializable {
 
+    @NotBlank
     private String firstName;
 
+    @NotBlank(allowEmptyString = true)
     private String lastName;
 
     public Person() {
