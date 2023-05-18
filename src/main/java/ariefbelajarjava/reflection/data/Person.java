@@ -1,6 +1,8 @@
 package ariefbelajarjava.reflection.data;
 
-public class Person {
+import java.io.Serializable;
+
+public final class Person implements NameAble, Serializable {
 
     private String firstName;
 
