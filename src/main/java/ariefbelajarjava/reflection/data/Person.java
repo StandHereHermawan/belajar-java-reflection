@@ -3,6 +3,7 @@ package ariefbelajarjava.reflection.data;
 import ariefbelajarjava.reflection.annotation.NotBlank;
 
 import java.io.Serializable;
+import java.util.List;
 
 public final class Person implements NameAble, Serializable {
 
@@ -12,9 +13,24 @@ public final class Person implements NameAble, Serializable {
     @NotBlank(allowEmptyString = true)
     private String lastName;
 
+    private List<String> hobbies;
+
     private int age;
 
     public Person() {
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public int getAge() {
@@ -23,11 +39,6 @@ public final class Person implements NameAble, Serializable {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     public String getFirstName() {
